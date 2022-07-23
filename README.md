@@ -33,7 +33,7 @@ Replicated (adjusted) phenotypic and reflectance data for all four environments 
 ### Usage in R
 
 ```r
-site <- "https://github.com/MarcooLopez/Data_for_Lopez-Cruz_et_al_2020/raw/master"
+site <- "https://github.com/MarcooLopez/Data_for_Lopez-Cruz_et_al_2020/raw/main"
 filename <- "wheatHTP.E1.RData"
 
 download.file(paste0(site,"/",filename), filename, mode="wb")
