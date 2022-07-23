@@ -34,6 +34,7 @@ Replicated (adjusted) phenotypic and reflectance data for all four environments 
 
 ```r
 site <-  "https://github.com/MarcooLopez/SFSI/blob/master/data" 
+"https://github.com/MarcooLopez/Data_for_Lopez-Cruz_et_al_2020/blob/main/wheatHTP.E1.RData
 filename <- "wheatHTP.E1.RData"
 
 download.file(paste0(site,"/",filename,"?raw=true"),filename,mode="wb")
