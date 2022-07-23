@@ -23,9 +23,20 @@ Reflectance data was collected from the fields using both infrared and hyper-spe
 Lines were sequenced for GBS at 192-plexing on Illumina HiSeq2000 or HiSeq2500 with 1 x 100 bp reads. SNPs were called across all lines anchored to the genome assembly of Chinese Spring (International Wheat Genome Sequencing Consortium 2014). Next, SNP were extracted and filtered so that lines >50% missing data were removed. Markers were recoded as –1, 0, and 1, corresponding to homozygous for the minor allele, heterozygous, and homozygous for the major allele, respectively. Next, markers with a minor allele frequency <0.05 and >15% of missing data were removed. Remaining SNPs with missing values were imputed using the mean of the observed marker genotypes at a given locus.
 
 **Format**
+
 Replicated (adjusted) phenotypic and reflectance data for all four environments (E1, ..., E4) are storaged in R-datasets `wheatHTP.E1`, ..., and `wheatHTP.E4`, respectively. Each file contains the following objects
 
  - `Y`: (matrix) phenotypic data for YLD, DTH, DTM, and PH; and the trial in which each genotype was tested.
  - `X`: (9-dimensional list) reflectance data for time-points 1,2,...,9.
  - `VI`: (9-dimensional list) green and red NDVI for time-points 1,2,...,9.
 
+**Usage in R**
+
+```r
+site <-  "https://github.com/MarcooLopez/SFSI/blob/master/data" 
+filename <- "wheatHTP.E1.RData"
+
+download.file(paste0(site,"/",filename,"?raw=true"),filename,mode="wb")
+load(filename)
+
+```
